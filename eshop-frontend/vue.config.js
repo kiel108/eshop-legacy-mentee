@@ -1,6 +1,6 @@
 module.exports = {
   // Local Legacy
-  devServer: {
+ /* devServer: {
     proxy: {
         "^/": {
           target: "http://localhost:8090"
@@ -8,6 +8,7 @@ module.exports = {
     },
     disableHostCheck: true
   }
+  */
 
   // EC2 OR Dockerize & skaffold
   // devServer: {

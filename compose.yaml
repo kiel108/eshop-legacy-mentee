@@ -33,14 +33,14 @@ services:
   #   ports:
   #     - "8080:8080"
   #   command: http-server dist --proxy http://backend:8090
-    backend:
-      depends_on:
-        - postgres  
-      image: eshop-backend:0.0.1-SNAPSHOT
-      restart: always
-      ports:
-        - "8090:8090"
-      container_name: eshop-backend
-      environment:
-        - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/eshop_db
-        - SPRING_REDIS_HOST=redis
+  backend:
+    depends_on:
+      - postgres  
+    image: eshop-backend:0.0.1-SNAPSHOT
+    restart: always
+    ports:
+      - "8090:8090"
+    container_name: eshop-backend
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/eshop_db
+      - SPRING_REDIS_HOST=redis

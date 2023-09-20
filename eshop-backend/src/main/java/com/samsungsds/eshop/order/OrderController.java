@@ -51,7 +51,6 @@ public class OrderController {
         // cart 조회
         CartItem[] cartItems = Iterables.toArray(cartService.getCartItems(), CartItem.class);
 
-
         // cart 상품 조회
         Product[] products = getProducts(cartItems);
 
@@ -87,4 +86,5 @@ public class OrderController {
         String[] cartItemIds = Stream.of(cartItems).map(CartItem::getId).toArray(String[]::new);
         return productService.fetchProductsByIds(cartItemIds).getProducts();
     }
+    
 }
